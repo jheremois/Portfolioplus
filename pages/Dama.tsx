@@ -54,47 +54,67 @@ const Dama: NextPage = (props: any) => {
   return (
     <>
         <div className="max-w-7xl mx-auto">
-            <div className="p-4 md:p-12">
-                <div className="userInfo flex items-center pb-9 gap-4 border-b-4 border-grey">
-                <Image
-                    src={"/profPic.png"} 
-                    alt='' width={240} height={240}
-                    className='
-                    rounded-lg
-                    '
-                />
-                <div className="flex flex-col gap-2">
-                    <h1 className='text-white font-semibold text-3xl'>
-                        Jheremy Castro
-                    </h1>
-                    <h5 className='font-medium text-lg text-primaryAlt'>
-                        Software developer
-                    </h5>
-                    <p className='font-light text-s text-bodyText'>
-                        Dominican software developer with knowledge of web and mobile development.
-                    </p>
-                    <div className='flex gap-3 pt-4'>
-                    <button 
-                        className="
-                        rounded-xl py-2 px-8 bg-primary
-                        hover:bg-primaryAlt w-fit duration-100
-                        "
-                    >
-                        Contact
-                    </button>
-                    <button 
-                        className="
-                        rounded-xl py-2 px-8 bg-grey w-fit
-                        hover:bg-black duration-100
-                        "
-                    >
-                        <LinkIcon width={17}/>
-                    </button>
+            <div className="p-7 md:p-12">
+                <div 
+                    className="
+                        userInfo flex flex-col md:flex-row 
+                        items-center pb-9 gap-4 border-b-4 
+                        border-grey
+                    "
+                >
+                    <Image
+                        src={"/profPic.png"} 
+                        alt='' width={240} height={240}
+                        className='
+                        rounded-lg
+                        w-full md:w-fit
+                        '
+                    />
+                    <div className="flex flex-col gap-2 text-center md:text-start">
+                        <h1 
+                            className='
+                                text-white font-semibold 
+                                text-4xl md:text-3xl
+                            '
+                        >
+                            Jheremy Castro
+                        </h1>
+                        <h5 
+                            className='
+                                text-2xl
+                                font-medium md:text-lg
+                                text-primaryAlt
+                            '
+                        >
+                            Software developer
+                        </h5>
+                        <p className='font-light text-lg md:text-base text-bodyText'>
+                            Dominican software developer with knowledge of web and mobile development.
+                        </p>
+                        <div className='flex gap-3 pt-4 justify-center md:justify-start'>
+                            <button 
+                                className="
+                                rounded-xl py-2 px-8 bg-primary
+                                hover:bg-primaryAlt w-fit duration-100
+                                "
+                            >
+                                Contact
+                            </button>
+                            <button 
+                                className="
+                                rounded-xl px-8 bg-grey w-fit
+                                hover:bg-black duration-100
+                                "
+                            >
+                                <LinkIcon 
+                                    className='w-5'
+                                />
+                            </button>
+                        </div>
                     </div>
                 </div>
-                </div>
                 <div className="py-6 grid gap-6">
-                    <h4 className='text-2xl font-semibold'>
+                    <h4 className='text-3xl md:text-2xl font-semibold text-center md:text-start'>
                         Projects
                     </h4>
                     <div className="projectList grid md:grid-cols-3 gap-7">
