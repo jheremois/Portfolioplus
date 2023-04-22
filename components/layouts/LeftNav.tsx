@@ -21,15 +21,15 @@ const navOption = [
   { label: 'My Stats', icon: <ChartBarIcon width={35} style={{paddingLeft: 3, paddingRight: 3}} />, url: "/" }
 ];
 
-const Nav: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const LeftNav: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false)
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
     <>
-      <div className="flex h-screen bg-mainBg">
-        <div className={`${showSidebar ? 'block' : 'hidden'} md:block bg-darkGray h-screen w-64 md:w-1/4 lg:w-1/5 2xl:w-1/6 border-r-4 border-grey`}>
-          <nav className="">
+      <div className="flex bg-mainBg">
+        <div className={`${showSidebar ? 'block' : 'hidden'} relative md:block bg-darkGray w-64 md:w-1/4 lg:w-1/5 2xl:w-1/6 border-r-4 border-grey`}>
+          <nav className="fixed w-64 md:w-1/4 lg:w-1/5 2xl:w-1/6">
             <div className="proflieBlock">
               <div className="flex items-center justify-between border-b border-grey p-4">
                 <div className="flex items-center gap-2">
@@ -51,8 +51,8 @@ const Nav: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     " 
                     onClick={() => setShowOverlay(!showOverlay)}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
                   </button>
                   {showOverlay && (
@@ -74,8 +74,12 @@ const Nav: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </div>
             </div>
             <div className="p-4 flex flex-col gap-2">
-              { navOption.map((option)=>(
-                <Link href={option.url} className="block text-lg font-medium text-indigo-600 hover:text-indigo-900">
+              { navOption.map((option, i)=>(
+                <Link 
+                  key={`${option}ec${i}`}
+                  href={option.url} 
+                  className="block text-lg font-medium text-indigo-600 hover:text-indigo-900"
+                >
                   <div 
                     className="
                       flex items-center gap-2 w-full
@@ -124,4 +128,4 @@ const Nav: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   )
 }
 
-export default Nav
+export default LeftNav

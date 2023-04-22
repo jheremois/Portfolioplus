@@ -1,11 +1,12 @@
 import { NextPage } from 'next';
 import axios from 'axios';
-import Nav from '../components/layouts/Nav';
+import LeftNav from '../components/layouts/LeftNav';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { setTimeout } from 'timers';
 import Image from 'next/image';
 import {ShareIcon} from "@heroicons/react/24/outline"
+import Project from '../components/Project';
 
 interface userData {
   display_name: string
@@ -48,8 +49,8 @@ const Profile: NextPage = (props: any) => {
   
   return (
     <>
-      <Nav>
-        <div className=" p-12">
+      <LeftNav>
+        <div className="p-4 md:p-12 2xl:p-16">
           <div className="userInfo flex items-center pb-9 gap-4 border-b-4 border-grey">
             <img 
               src={userData.profile_pic} 
@@ -88,8 +89,60 @@ const Profile: NextPage = (props: any) => {
               </div>
             </div>
           </div>
+          <div className="py-6">
+            <div className="projectList grid md:grid-cols-3 gap-7">
+              <Project 
+                bgColor='f' description='df' 
+                imgBg='f' projectUrl='f'
+                title=''
+                key={2}
+              />
+              <Project 
+                bgColor='f' description='df' 
+                imgBg='f' projectUrl='f'
+                title=''
+                key={2}
+              />
+              <Project 
+                bgColor='f' description='df' 
+                imgBg='f' projectUrl='f'
+                title=''
+                key={2}
+              />
+              <Project 
+                bgColor='f' description='df' 
+                imgBg='f' projectUrl='f'
+                title=''
+                key={2}
+              />
+              <Project 
+                bgColor='f' description='df' 
+                imgBg='f' projectUrl='f'
+                title=''
+                key={2}
+              />
+              <Project 
+                bgColor='f' description='df' 
+                imgBg='f' projectUrl='f'
+                title=''
+                key={2}
+              />
+              <Project 
+                bgColor='f' description='df' 
+                imgBg='f' projectUrl='f'
+                title=''
+                key={2}
+              />
+              <Project 
+                bgColor='f' description='df' 
+                imgBg='f' projectUrl='f'
+                title=''
+                key={2}
+              />
+            </div>
+          </div>
         </div>
-      </Nav>
+      </LeftNav>
     </>
   )
 }
