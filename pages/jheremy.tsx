@@ -2,9 +2,9 @@ import { NextPage } from 'next';
 import Image from 'next/image';
 import {LinkIcon} from "@heroicons/react/24/outline"
 import Project from '../components/Project';
+import Link from 'next/link';
 
-
-const Dama: NextPage = (props: any) => {
+const Jheremy: NextPage = (props: any) => {
 
   const projectList = [
     {
@@ -50,6 +50,29 @@ const Dama: NextPage = (props: any) => {
         title: 'Shuni'
     }
   ]
+
+  const socials = [
+    {
+        src: "/profile/ig-icon.png",
+        alt: 'Instagram',
+        url: 'https://www.instagram.com/jheremois/',
+    },
+    {
+        src: "/profile/linkedin-icon.png",
+        alt: 'Linkedin',
+        url: 'https://www.linkedin.com/in/jheremy-ricardo-castro-guerrero-3a85521a0/',
+    },
+    {
+        src: "/profile/twitter-icon.png",
+        alt: 'Twitter',
+        url: 'https://www.instagram.com/jheremois/',
+    },
+    {
+        src: "/profile/github-icon.png",
+        alt: 'Github',
+        url: 'https://github.com/jheremois',
+    },
+  ]
   
   return (
     <>
@@ -58,7 +81,7 @@ const Dama: NextPage = (props: any) => {
                 <div 
                     className="
                         userInfo flex flex-col md:flex-row 
-                        items-center pb-9 gap-4 border-b-4 
+                        items-center pb-9 gap-6 border-b-4 
                         border-grey
                     "
                 >
@@ -66,19 +89,46 @@ const Dama: NextPage = (props: any) => {
                         src={"/profPic.png"} 
                         alt='' width={240} height={240}
                         className='
-                        rounded-lg
+                        rounded-xl
                         w-full md:w-fit
                         '
                     />
                     <div className="flex flex-col gap-2 text-center md:text-start">
-                        <h1 
-                            className='
-                                text-white font-semibold 
-                                text-4xl md:text-3xl
-                            '
+                        <div 
+                            className="flex flex-col md:flex-row gap-3 items-center"
                         >
-                            Jheremy Castro
-                        </h1>
+                            <h1 
+                                className='
+                                    text-white font-semibold 
+                                    text-4xl md:text-3xl
+                                '
+                            >
+                                Jheremy Castro
+                            </h1>
+                            <span className='md:bg-white md:h-2 w-2 rounded-full translate-y-1'>
+
+                            </span>
+                            <div className="flex items-center gap-4">
+                                {
+                                    socials.map((social, inx)=>(
+                                        <Link
+                                            href={social.url}
+                                            key={inx}
+                                            target='_blank'
+                                        >
+                                            <Image
+                                                src={social.src} 
+                                                alt={social.alt} width={24} height={24}
+                                                className='
+                                                    translate-y-1
+                                                    md:w-6
+                                                '
+                                            />
+                                        </Link>
+                                    ))
+                                }
+                            </div>
+                        </div>
                         <h5 
                             className='
                                 text-2xl
@@ -138,4 +188,4 @@ const Dama: NextPage = (props: any) => {
   )
 }
 
-export default Dama;
+export default Jheremy;
