@@ -32,6 +32,17 @@ a {
   }
 }
 
+.loader{
+  border: solid 8px #f0f0f000;
+  border-top: solid 8px #f0f0f0;
+  border-bottom: solid 8px #f0f0f0;
+  animation: loadAni 1.4s linear infinite;
+}
+@keyframes loadAni {
+  100%{
+    transform: rotate(360deg)
+  }
+}
 
 @tailwind base;
 @tailwind components;
