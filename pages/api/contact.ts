@@ -25,7 +25,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     // send the email
     const info = await transporter.sendMail({
       from: 'portfoliogg-contact@geekguysstudio.com',
-      to: process.env.MAILTO,
+      to: `${process.env.MAILTO}`,
       subject: `${name} send you a message, lets link!`,
       html: `
         <html>
