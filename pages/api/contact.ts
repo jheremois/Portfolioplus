@@ -17,14 +17,15 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       port: 587,
       secure: false, // upgrade later with STARTTLS
       auth: {
-        
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
       },
     });
 
     // send the email
     const info = await transporter.sendMail({
       from: 'portfoliogg-contact@geekguysstudio.com',
-      to: [''],
+      to: process.env.MAILTO,
       subject: `${name} send you a message, lets link!`,
       html: `
         <html>
