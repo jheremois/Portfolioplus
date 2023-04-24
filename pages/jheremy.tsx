@@ -79,6 +79,14 @@ const Jheremy: NextPage = (props: any) => {
 
     const [isLoading, setIsLoading] = useState(true); // State to manage loader visibility
   
+    useEffect(()=>{
+        setTimeout(()=>{
+            if(isLoading){
+                setIsLoading(false)
+            }
+        }, 3000)
+    }, [])
+
     return (
         <>
             {
