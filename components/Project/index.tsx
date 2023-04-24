@@ -7,6 +7,7 @@ interface projectProperties {
     description: string
     bgColor: string
     projectUrl: string
+    onLoad?: any
 }
 
 const Project = (prjct: projectProperties)=>{
@@ -14,8 +15,6 @@ const Project = (prjct: projectProperties)=>{
         <>
             <div 
                 style={{
-                    //backgroundImage: `url('https://storage.googleapis.com/ritme-posts/image%2010.png')`,
-                    //backgroundColor: `#574AB8`
                     backgroundImage: `url(${prjct.imgBg})`,
                     backgroundColor: `#${prjct.imgBg}`
                 }}
