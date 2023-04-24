@@ -109,7 +109,7 @@ const Jheremy: NextPage = (props: any) => {
                             rounded-xl
                             w-full md:w-fit
                             '
-                            onLoad={()=> setIsLoading(false)}
+                            /* onLoad={()=> setIsLoading(false)} */
                         />
                         <div className="flex flex-col gap-2 text-center md:text-start">
                             <div 
