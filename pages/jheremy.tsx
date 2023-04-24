@@ -144,7 +144,7 @@ const Jheremy: NextPage = (props: any) => {
                         </p>
                         <div className='flex gap-3 pt-4 justify-center md:justify-start'>
                             <ContactModal/>
-                            <button 
+                            {/* <button 
                                 className="
                                 rounded-xl px-8 bg-grey w-fit
                                 hover:bg-black duration-100
@@ -153,7 +153,7 @@ const Jheremy: NextPage = (props: any) => {
                                 <LinkIcon 
                                     className='w-5'
                                 />
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>

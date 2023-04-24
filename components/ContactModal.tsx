@@ -135,7 +135,6 @@ const ContactModal = ()=>{
 
     return(
         <>
-            <Toast/>
             <button 
                 className="
                 rounded-xl py-2 px-8 bg-primary
@@ -147,6 +146,7 @@ const ContactModal = ()=>{
             >
                 Contact
             </button>
+            <Toast/>
             {
                 modalopen &&
                 <div className="left-0 w-screen bg-grey bg-opacity-30 fixed modal top-0 z-50 min-h-screen ">
