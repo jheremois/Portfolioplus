@@ -15,8 +15,8 @@ export default function Home() {
 
   return (
     <>
-      <main className={`h-screen flex justify-center items-center`}>
-        <div className="bg-grey maxLoginW -translate-y-9 shadow-gray shadow-sm border border-gray p-7 rounded-xl w-11/12">
+      <main className={`h-screen flex justify-center items-center bg-black`}>
+        <div className="moveTop bg-darkGray maxLoginW -translate-y-9 shadow-gray shadow-sm border border-gray p-7 rounded-xl w-11/12">
           <div className="flex flex-col gap-1">
             <h3 className='font-semibold text-3xl'>
               Get Started
@@ -30,7 +30,7 @@ export default function Home() {
               type="text" 
               placeholder='Place your email' 
               className='
-                bg-grey p-1 w-full border-b-2
+                bg-darkGray p-1 w-full border-b-2
                 text-lightGray placeholder:text-gray
                 placeholder:font-medium
                 text-lg outline-none
@@ -41,7 +41,7 @@ export default function Home() {
               type="text" 
               placeholder='Place your password' 
               className='
-                bg-grey p-1 w-full border-b-2
+                bg-darkGray p-1 w-full border-b-2
                 text-lightGray placeholder:text-gray
                 placeholder:font-medium
                 text-lg outline-none
@@ -66,7 +66,7 @@ export default function Home() {
                 or
                 <hr className='w-full' />
               </div>
-              <Link href={'http://localhost:3100/auth/google'}>
+              <Link href={'https://portfolio-plus-service-app/google/auth'}>
                 <button 
                   className='
                     bg-primaryAlt p-2 px-7 rounded-lg 
