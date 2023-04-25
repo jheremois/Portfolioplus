@@ -177,6 +177,7 @@ const ContactModal = ()=>{
                                 <form
                                     onSubmit={handleSubmit}
                                     className="
+                                        moveTop
                                         w-11/12  md:w-2/5 2xl:w-1/3 bg-darkGray mt-4 md:mt-20 
                                         rounded-lg shadow-sm shadow-gray-600
                                         p-9 flex-col flex gap-6 h-fit

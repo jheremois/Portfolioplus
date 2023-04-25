@@ -18,7 +18,7 @@ const Project = (prjct: projectProperties)=>{
                     backgroundImage: `url(${prjct.imgBg})`,
                     backgroundColor: `#${prjct.imgBg}`
                 }}
-                className="w-full bg rounded-xl h-80 bg-no-repeat bg-cover overflow-hidden"
+                className="moveTopDel w-full bg rounded-xl h-80 bg-no-repeat bg-cover overflow-hidden"
             >
                 <div 
                     className="h-2/5 p-6  bg-black"
