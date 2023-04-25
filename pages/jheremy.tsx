@@ -138,7 +138,10 @@ const Jheremy: NextPage = (props: any) => {
                                                             src={social.src} 
                                                             alt={social.alt} width={24} height={24}
                                                             className='
-                                                                translate-y-1
+                                                                mt-1
+                                                                -translate-y-1
+                                                                md:mt-0
+                                                                md:translate-y-1
                                                                 md:w-6
                                                             '
                                                         />

@@ -135,18 +135,20 @@ const ContactModal = ()=>{
 
     return(
         <>
-            <button 
-                className="
-                rounded-xl py-2 px-8 bg-primary
-                hover:bg-primaryAlt w-fit duration-100
-                "
-                onClick={()=>{
-                    setModalopen(true)
-                }}
-            >
-                Contact
-            </button>
-            <Toast/>
+            <div className="">
+                <button 
+                    className="
+                    rounded-xl py-2 px-8 bg-primary
+                    hover:bg-primaryAlt w-fit duration-100
+                    "
+                    onClick={()=>{
+                        setModalopen(true)
+                    }}
+                >
+                    Contact
+                </button>
+                <Toast/>
+            </div>
             {
                 modalopen &&
                 <div className="left-0 w-screen bg-grey bg-opacity-30 fixed modal top-0 z-50 min-h-screen ">
@@ -183,7 +185,7 @@ const ContactModal = ()=>{
                                         p-9 flex-col flex gap-6 h-fit
                                     "
                                 >
-                                    <div className="">
+                                    <div className="text-start">
                                         <div className="flex justify-between items-center">
                                             <h4 className='text-xl font-semibold'>
                                                 Send a message to Jheremy
@@ -198,10 +200,10 @@ const ContactModal = ()=>{
                                             </div>
                                         </div>
                                         <p className='text-lg font-normal text-bodyText'>
-                                            We will use your contact details to contact you directly about potential cooperation opportunities now or in the future.
+                                            Feel free to send us a message to collaborate, work together, or provide feedback.
                                         </p>
                                     </div>
-                                    <div className="">
+                                    <div className="text-start">
                                         <div className="flex gap-3 flex-col md:flex-row justify-between">
                                             <div className="mb-4 w-full">
                                                 <label htmlFor="name" className="block mb-1 text-sm">
