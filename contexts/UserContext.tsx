@@ -13,7 +13,7 @@ export interface UserData{
     twitter: string,
     linkedin: string,
     github: string,
-    isProfileComplete?: true
+    profile_complete?: true
 }
 
 export interface UserContext{
