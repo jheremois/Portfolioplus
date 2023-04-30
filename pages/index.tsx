@@ -66,7 +66,7 @@ export default function Home() {
                 or
                 <hr className='w-full' />
               </div>
-              <Link href={'https://portfolio-plus-service-app/google/auth'}>
+              <Link href={'http://localhost:3100/auth/google'}>
                 <button 
                   className='
                     bg-primaryAlt p-2 px-7 rounded-lg 

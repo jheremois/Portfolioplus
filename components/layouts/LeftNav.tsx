@@ -1,8 +1,8 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import {UserCircleIcon, StarIcon, ChartBarIcon, PlusCircleIcon} from "@heroicons/react/24/outline"
+import {UserCircleIcon, StarIcon, ChartBarIcon } from "@heroicons/react/24/outline"
+import { useUserContext } from '../../contexts/UserContext';
 
 interface OverlayOption {
   label: string;
@@ -22,6 +22,7 @@ const navOption = [
 ];
 
 const LeftNav: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { userData, setUser } = useUserContext();
   const [showSidebar, setShowSidebar] = useState(false)
   const [showOverlay, setShowOverlay] = useState(false);
 
@@ -36,10 +37,10 @@ const LeftNav: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                   <Image src={'/logo.png'} alt="" width={50} height={50} />
                   <div className="flex flex-col text-sm">
                     <p className='font-semibold'>
-                      Jheremy Castro
+                      {userData?.display_name}
                     </p>
                     <p className='text-bodyText'>
-                      Jheremy@gmail.com
+                      {userData?.profession}
                     </p>
                   </div>
                 </div>
