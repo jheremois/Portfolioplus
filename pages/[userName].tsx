@@ -10,74 +10,7 @@ import { useEffect, useState } from 'react';
 import { getUserProflie } from '../services/user.services';
 import { UserData } from '../contexts/UserContext';
 
-const projectList = [
-    {
-        bgColor: '#DA403F',
-        description: 'Oximiun oficial e-comerce.',
-        imgBg: '/project5.png',
-        projectUrl: 'https://dribbble.com/shots/20967625-Oxmium-Steatwear-Brand-E-Commerce-UI',
-        title: 'Oxmiun'
-    },
-    {
-        bgColor: '#1B1B1D',
-        description: 'PortfolioPlus ofical website.',
-        imgBg: '/project2.png',
-        projectUrl: 'https://portfolio-plus-info.vercel.app/',
-        title: 'PortfolioPlus Website'
-    },
-    {
-        bgColor: '#007AFF',
-        description: 'App for easy portfolio creation.',
-        imgBg: '/project1.png',
-        projectUrl: 'https://portfolioplus-dun.vercel.app/',
-        title: 'PortfolioPlus'
-    },
-    {
-        bgColor: '#E9A62E',
-        description: 'Ovion Company oficial website.',
-        imgBg: '/project3.png',
-        projectUrl: 'https://www.ovioncompany.com/',
-        title: 'Ovion Company'
-    },
-    {
-        bgColor: '#5749B8',
-        description: 'Create and rate posts from users.',
-        imgBg: '/project4.png',
-        projectUrl: 'https://play.google.com/store/apps/details?id=ritme.app',
-        title: 'Ritme - Mobile App'
-    },
-    {
-        bgColor: '#0CC77E',
-        description: 'Daily crypto and stocks news.',
-        imgBg: '/project6.png',
-        projectUrl: 'https://dribbble.com/shots/21292929-Shuni-How-s-things-going',
-        title: 'Shuni'
-    }
-]
-
-const socials = [
-    {
-        src: "/profile/ig-icon.png",
-        alt: 'Instagram',
-        url: 'https://www.instagram.com/jheremois/',
-    },
-    {
-        src: "/profile/linkedin-icon.png",
-        alt: 'Linkedin',
-        url: 'https://www.linkedin.com/in/jheremy-ricardo-castro-guerrero-3a85521a0/',
-    },
-    {
-        src: "/profile/twitter-icon.png",
-        alt: 'Twitter',
-        url: 'https://www.twitter.com/jheremois/',
-    },
-    {
-        src: "/profile/github-icon.png",
-        alt: 'Github',
-        url: 'https://github.com/jheremois',
-    },
-]
-
+const projectList: any = []
 
 const Jheremy: NextPage = () => {
 
@@ -226,7 +159,7 @@ const Jheremy: NextPage = () => {
                                 </h4>
                                 <div className="projectList grid md:grid-cols-3 gap-7">
                                     {
-                                        projectList.map((prjt, indx) => (
+                                        projectList.map((prjt: any, indx: number) => (
                                             <Project
                                                 bgColor={prjt.bgColor}
                                                 description={prjt.description}

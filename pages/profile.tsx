@@ -7,6 +7,7 @@ import { getProfile } from '../services/user.services';
 import Project from '../components/Project';
 import { ShareIcon } from '@heroicons/react/24/outline';
 import LeftNav from '../components/layouts/LeftNav';
+import { useRouter } from 'next/router'
 import Link from 'next/link';
 
 
@@ -58,15 +59,22 @@ const projectList = [
 
 const Profile = () => {
   
+  const router = useRouter()
   const [isLoading, setIsLoading] = useState(true);
   
   const { userData, setUser } = useUserContext();
+
+  const getUser = async () => {
+  }
   
   useEffect(() => {
-    getProfile().then((userData) => {
-      setUser(userData.profileData)
-      setIsLoading(false)
-      console.log("global user: ", userData.profileData);
+    getProfile().then((userfetch) => {
+      setUser(userfetch.profileData)
+      if(!userfetch.profileData?.profile_complete)
+        //router.push('/get-started')
+        setIsLoading(false)
+      else
+        setIsLoading(false)
     }).catch((error) => {
       console.log(error);
     })

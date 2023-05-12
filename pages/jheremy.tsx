@@ -6,13 +6,15 @@ import Link from 'next/link';
 import ContactModal from '../components/ContactModal';
 import PortfolioLoading from '../components/PorfolioLoading';
 import { useEffect, useState } from 'react';
+import { ShareIcon } from '@heroicons/react/24/outline';
+import ShareModal from '../components/ShareModal';
 
 const projectList = [
   {
       bgColor: '#DA403F',
       description: 'Oximiun oficial e-comerce.',
       imgBg: '/project5.png',
-      projectUrl: 'https://dribbble.com/shots/20967625-Oxmium-Steatwear-Brand-E-Commerce-UI',
+      projectUrl: 'https://oxmiun.myshopify.com/',
       title: 'Oxmiun'
   },
   {
@@ -164,16 +166,7 @@ const Jheremy: NextPage = (props: any) => {
                                     </p>
                                     <div className='flex gap-3 pt-4 justify-center md:justify-start'>
                                         <ContactModal/>
-                                        <button 
-                                            className="
-                                            rounded-xl px-8 bg-grey w-fit
-                                            hover:bg-black duration-100
-                                            "
-                                        >
-                                            <LinkIcon 
-                                                className='w-5'
-                                            />
-                                        </button>
+                                        <ShareModal/>
                                     </div>
                                 </div>
                             </div>
