@@ -167,6 +167,9 @@ const Jheremy: NextPage = (props: any) => {
                                     <div className='flex gap-3 pt-4 justify-center md:justify-start'>
                                         <ContactModal/>
                                         <ShareModal/>
+                                        {/* <ShareModal/>
+                                        <ShareModal/>
+                                        <ShareModal/> */}
                                     </div>
                                 </div>
                             </div>
