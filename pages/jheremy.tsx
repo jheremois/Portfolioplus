@@ -104,7 +104,7 @@ const Jheremy: NextPage = (props: any) => {
                                 "
                             >
                                 <Image
-                                    src={"/profPic.png"} 
+                                    src={"/profilepic.png"} 
                                     alt='' width={240} height={240}
                                     className={`
                                         rounded-xl
