@@ -14,44 +14,52 @@ const projectList = [
       bgColor: '#DA403F',
       description: 'Oximiun oficial e-comerce.',
       imgBg: '/project5.png',
-      projectUrl: 'https://oxmiun.myshopify.com/',
+      projectUrl: 'https://oxmiun.com/',
       title: 'Oxmiun'
-  },
+    },
+    {
+        bgColor: '#5749B8',
+        description: 'Create and rate posts from users.',
+        imgBg: '/project4.png',
+        projectUrl: 'https://play.google.com/store/apps/details?id=ritme.app',
+        //projectUrl: 'https://ritme.vercel.app/',
+        title: 'Ritme - Mobile App'
+    },
   {
-      bgColor: '#1B1B1D',
+      bgColor: '#303443',
       description: 'PortfolioPlus ofical website.',
       imgBg: '/project2.png',
       projectUrl: 'https://portfolio-plus-info.vercel.app/',
       title: 'PortfolioPlus Website'
   },
-  {
+  /* {
       bgColor: '#007AFF',
       description: 'App for easy portfolio creation.',
       imgBg: '/project1.png',
       projectUrl: 'https://portfolioplus-dun.vercel.app/',
       title: 'PortfolioPlus'
-  },
-  {
-      bgColor: '#E9A62E',
-      description: 'Ovion Company oficial website.',
-      imgBg: '/project3.png',
-      projectUrl: 'https://www.ovioncompany.com/',
-      title: 'Ovion Company'
-  },
-  {
-      bgColor: '#5749B8',
-      description: 'Create and rate posts from users.',
-      imgBg: '/project4.png',
-      projectUrl: 'https://play.google.com/store/apps/details?id=ritme.app',
-      title: 'Ritme - Mobile App'
-  },
-  {
+    }, */
+    {
+        bgColor: '#E9A62E',
+        description: 'Ovion Company oficial website.',
+        imgBg: '/project3.png',
+        projectUrl: 'https://www.ovioncompany.com/',
+        title: 'Ovion Company'
+    },
+    {
+        bgColor: '#CF5050',
+        description: 'Ritme web version.',
+        imgBg: '/project9.png',
+        projectUrl: 'https://ritme.vercel.app/',
+        title: 'Ritme - web'
+    },
+  /* {
       bgColor: '#0CC77E',
       description: 'Daily crypto and stocks news.',
       imgBg: '/project6.png',
       projectUrl: 'https://dribbble.com/shots/21292929-Shuni-How-s-things-going',
       title: 'Shuni'
-  }
+  } */
 ]
 
 const socials = [
@@ -107,8 +115,10 @@ const Jheremy: NextPage = (props: any) => {
                                     src={"/profilepic.png"} 
                                     alt='' width={240} height={240}
                                     className={`
-                                        rounded-xl
-                                        w-full md:w-fit
+                                        rounded-lg 
+                                        w-full
+                                         md:w-64
+                                         md:h-64 object-cover
                                         
                                     `}
                                     onLoad={()=> setIsLoading(false)}

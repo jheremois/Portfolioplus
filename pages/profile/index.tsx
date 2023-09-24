@@ -1,14 +1,15 @@
 import { GetServerSideProps, NextPage } from 'next';
 import { useEffect, useState } from 'react';
-import authMiddleware from '../middlewares/authMiddleware';
-import PortfolioLoading from '../components/PorfolioLoading';
-import { useUserContext } from '../contexts/UserContext';
-import { getProfile } from '../services/user.services';
-import Project from '../components/Project';
+import authMiddleware from '../../middlewares/authMiddleware';
+import PortfolioLoading from '../../components/PorfolioLoading';
+import { useUserContext } from '../../contexts/UserContext';
+import { getProfile } from '../../services/user.services';
+import Project from '../../components/Project';
 import { ShareIcon } from '@heroicons/react/24/outline';
-import LeftNav from '../components/layouts/LeftNav';
+import LeftNav from '../../components/layouts/LeftNav';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
+import EditProfileModal from '../../components/EditProfileModal';
 
 
 const projectList = [
@@ -122,6 +123,7 @@ const Profile = () => {
                   alt='' width={240} height={240}
                   className='
                 rounded-lg
+                 h-56 w-56 object-cover
               '
                 />
                 <div className="flex flex-col gap-2 text-center md:text-start">

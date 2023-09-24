@@ -23,13 +23,13 @@ const Jheremy: NextPage = () => {
     const getUser = async () => {
         if (userName)
             await getUserProflie(userName).then((userData) => {
-                if(userData.success){
+                if (userData.success) {
                     setUserData(userData.profileData)
                     setIsLoading(false)
-                }else{
+                } else {
                     router.push('/')
                 }
-                    
+
             })
     }
     useEffect(() => {
@@ -82,6 +82,7 @@ const Jheremy: NextPage = () => {
                                     src={userData?.profile_pic}
                                     alt='' width={240} height={240}
                                     className='
+                                        h-56 w-56 object-cover
                 rounded-lg
               '
                                 />
@@ -140,7 +141,7 @@ const Jheremy: NextPage = () => {
                                         {userData?.description}
                                     </p>
                                     <div className='flex gap-3 pt-4 justify-center md:justify-start'>
-                                        <ContactModal/>
+                                        <ContactModal />
                                         <button
                                             className="
                                                 rounded-xl py-2 px-8 bg-grey w-fit
